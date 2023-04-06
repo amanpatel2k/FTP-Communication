@@ -21,8 +21,8 @@ Quit Command: If the user types "quit" then the server and client will close.
 
 ## Group Members:
 
-Name: Aman Patel, Kanwaljeet Ahluwalia, and Ali Tahami
-Email: amanpatel2k@csu.fullerton.edu, kanahluwalia@csu.Fullerton.edu, Atahami3@csu.Fullerton.edu
+# Name: Aman Patel, Kanwaljeet Ahluwalia, and Ali Tahami
+# Email: amanpatel2k@csu.fullerton.edu, kanahluwalia@csu.Fullerton.edu, Atahami3@csu.Fullerton.edu
 
 ## Programming Language: 
 
