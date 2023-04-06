@@ -93,6 +93,7 @@ def handle_client(client_socket):
 
         if user_input == 'FAILURE': 
             print('FAILURE\n')
+            print('------------------------------------')
         
         # If user_input is empty/invalid then server closes
         elif not user_input: 
@@ -119,6 +120,7 @@ def handle_client(client_socket):
                     while len(filedata) > byteSent: 
                         byteSent += client_socket.send(filedata[byteSent:])
                     print('SUCCESS\n')   
+                print('------------------------------------')
                     
             # If user input is 'ls'   
             elif user_input[:2] == 'ls': 
@@ -132,11 +134,13 @@ def handle_client(client_socket):
                     print('SUCCESS\n')
                 else: 
                     print('FAILURE\n')
+                print('------------------------------------')
 
             # If the user input is 'put'
             elif user_input[:3] == 'put':
                 # Server accepts the connection and uploads the filedata
                 server_accept(client_socket)
+                print('------------------------------------')
     
     # If the server types 'quit' it returns -1            
     if is_quit == True: 
