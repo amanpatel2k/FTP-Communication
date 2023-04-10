@@ -78,94 +78,108 @@ def server_accept(client):
     return 
             
 # ------------------------ MAIN CODE ---------------------------------
+    
+# If the length of the arguments is less than 3 then display a message and program quits
+if len(sys.argv) < 3: 
+    print('Missing the server machine and server port')
+    sys.exit()
 
-def myMain():
-    
-    # If the length of the arguments is less than 3 then display a message and program quits
-    if len(sys.argv) < 3: 
-        print('Missing the server machine and server port')
-        sys.exit()
-    
-    # Associate variables of the host IP and port 
-    target_host = str(sys.argv[1])
-    target_port = int(sys.argv[2])
+# Associate variables of the host IP and port 
+target_host = str(sys.argv[1])
+target_port = int(sys.argv[2])
 
-    # create a socket object
-    client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+# create a socket object
+client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+
+# connect the client
+client.connect((target_host, target_port))
+
+# Reset the byte count and fileData to empty 
+byteSent, filedata = 0, None
+
+while True: 
     
-    # connect the client
-    client.connect((target_host, target_port))
+    # Grab user input
+    my_input = input('ftp> ')
+    # Split the input by the space
+    comamnd_check = my_input.split(" ")
+    # input_no_space = my_input.replace(" ", "")
     
-    # Reset the byte count and fileData to empty 
-    byteSent, filedata = 0, None
+    # If user types quit, then program quits
+    if comamnd_check[0] == 'quit': break
     
-    while True: 
+    # Else if user types 'get'
+    elif comamnd_check[0] == 'get': 
+        # Send the encoded data of the input and file to the server
+        client.send(my_input.replace(" ", "").encode())    
         
-        # Grab user input
-        my_input = input('ftp> ')
-        # Split the input by the space
-        comamnd_check = my_input.split(" ")
-        # input_no_space = my_input.replace(" ", "")
+        myEmphem = int(client.recv(10).decode())
+        data_sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        data_sock.connect((target_host, myEmphem))
         
-        # If user types quit, then program quits
-        if comamnd_check[0] == 'quit': break
+        # Retrieve the data from the server
+        data_empty = server_accept(client)
         
-        # Else if user types 'get'
-        elif comamnd_check[0] == 'get': 
-            # Send the encoded data of the input and file to the server
-            client.send(my_input.replace(" ", "").encode())    
-            
-            # Retrieve the data from the server
-            empty_data = server_accept(client)
-            
-            # If data is empty then return invalid data  
-            if empty_data: 
-                print(f'File Context of "{comamnd_check[1]}" is not a valid file')
+        # If data is empty then return invalid data  
+        if data_empty: 
+            print(f'File Context of "{comamnd_check[1]}" is not a valid file')
         
-        # Else if user types 'ls' and length of the command is 1
-        elif comamnd_check[0] == 'ls' and len(comamnd_check) == 1: 
-            # Send the encoding of the command to the server
-            client.send(comamnd_check[0].encode())
-            temp = client.recv(65536)
-            print(temp.decode())
+        data_sock.close()
+    
+    # Else if user types 'ls' and length of the command is 1
+    elif comamnd_check[0] == 'ls' and len(comamnd_check) == 1: 
+        # Send the encoding of the command to the server
+        client.send(comamnd_check[0].encode())
         
-        # Else if user types 'put'
-        elif comamnd_check[0] == 'put': 
-            
-            # Send the encoding of the command 'put'
-            client.send(b'put')
-            
-            # If file does not exist 
-            if not os.path.isfile(comamnd_check[1]):
-                client.send(b'faultydata')
-                print('FAILURE: Invalid Filename')
-     
-            else: 
-                
-                # Encode the data from the file
-                print(f'We will be uploading this file: {comamnd_check[1]}')
-                filedata = encoding_data(comamnd_check[1])
-            
-                # If file is empty or doesn't exist
-                if filedata == 1:
-                    print('FAILURE')
-                
-                else:
-                    byteSent = 0
-                    # Loop through and sent the data 
-                    while len(filedata) > byteSent: 
-                        byteSent += client.send(filedata[byteSent:])
+        myEmphem = int(client.recv(10).decode())
+        data_sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        data_sock.connect((target_host, myEmphem))
+        temp = data_sock.recv(65536)
+        print(temp.decode())
         
-        # If user types invalid command
+        data_sock.close()
+    
+    # Else if user types 'put'
+    elif comamnd_check[0] == 'put': 
+        
+        # Send the encoding of the command 'put'
+        client.send(b'put')
+        
+        myEmphem = int(client.recv(10).decode())
+        data_sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        data_sock.connect((target_host, myEmphem))
+        
+        # If file does not exist 
+        if not os.path.isfile(comamnd_check[1]):
+            data_sock.send(b'faultydata')
+            print('FAILURE: Invalid Filename')
+    
         else: 
-            client.send(b'FAILURE')
-            print('Invalid command')
-
-        print('\n')
-    
-    # If user types quit, then the client closes
-    client.close()
-    print('Client Closed\n')
             
-if __name__ == '__main__': 
-    myMain()
+            # Encode the data from the file
+            print(f'We will be uploading this file: {comamnd_check[1]}')
+            filedata = encoding_data(comamnd_check[1])
+        
+            # If file is empty or doesn't exist
+            if filedata == 1:
+                print('FAILURE')
+            
+            else:
+                byteSent = 0
+                # Loop through and sent the data 
+                while len(filedata) > byteSent: 
+                    byteSent += data_sock.send(filedata[byteSent:])
+        
+        data_sock.close()
+    
+    # If user types invalid command
+    else: 
+        client.send(b'FAILURE')
+        print('Invalid command')
+
+    print('\n')
+
+# If user types quit, then the client closes
+client.close()
+print('Client Closed\n')
+            
