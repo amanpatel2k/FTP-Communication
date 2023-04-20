@@ -118,7 +118,7 @@ while True:
         data_sock.connect((target_host, myEmphem))
         
         # Retrieve the data from the server
-        data_empty = server_accept(client)
+        data_empty = server_accept(data_sock)
         
         # If data is empty then return invalid data  
         if data_empty: 

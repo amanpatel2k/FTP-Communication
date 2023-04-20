@@ -128,7 +128,7 @@ def handle_client(client_socket):
                     byteSent = 0
                     # Loop through and sent the data 
                     while len(filedata) > byteSent: 
-                        byteSent += client_socket.send(filedata[byteSent:])
+                        byteSent += data_connect.send(filedata[byteSent:])
                     print('SUCCESS\n')   
                 
                 data_connect.close()
