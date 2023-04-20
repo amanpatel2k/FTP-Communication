@@ -166,10 +166,7 @@ def handle_client(client_socket):
     else: 
         client_socket.close()
     
-        
 # ------------------------ MAIN CODE ---------------------------------
-
-
 
 # If the length of the arguments is less than 2 then display a message and program quits
 if len(sys.argv) < 2: 
