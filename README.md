@@ -3,6 +3,11 @@
 
 ## Programming Assignment #1
 
+## Group Members:
+
+#### Name: Aman Patel, Kanwaljeet Ahluwalia, and Ali Tahami
+#### Email: amanpatel2k@csu.fullerton.edu, kanahluwalia@csu.Fullerton.edu, Atahami3@csu.Fullerton.edu
+
 ## Project Description: 
 
 The goal of this project is to develop a simplified FTP server and FTP client communication program. The client will have the ability to specify specific commands such as ls, get, put, and quit. All of these commands will allow the client to communicate with the sever in uploading, downloading, and viewing any available files. 
@@ -11,18 +16,19 @@ The goal of this project is to develop a simplified FTP server and FTP client co
 
 After running both the server and client, the user can start entering commands such as get, put, ls, and quit. 
 
-Ls Command: If the user types "ls" from the client side, the server will display the list of file
+LS Command: If the user types "ls" from the client side, the server will display the list of file
 
-Get Command: If the user types "get" with a filename for instance, "get myText.txt", then the server will downloaded the file and display the content on the client side. 
+GET Command: If the user types "get" with a filename for instance, "get myText.txt", then the server will downloaded the file and display the content on the client side. 
 
-Put Command: If the user types "put" with a filename for instance, "put myText.txt", then the server will uploaded the file. 
+PUT Command: If the user types "put" with a filename for instance, "put myText.txt", then the server will uploaded the file. 
 
-Quit Command: If the user types "quit" then the server and client will close. 
+QUIT Command: If the user types "quit" then the server and client will close.
 
-## Group Members:
+## Images for Each Command Being Used: 
 
-#### Name: Aman Patel, Kanwaljeet Ahluwalia, and Ali Tahami
-#### Email: amanpatel2k@csu.fullerton.edu, kanahluwalia@csu.Fullerton.edu, Atahami3@csu.Fullerton.edu
+LS Command:  
+![Screenshot 2023-04-25 at 1 34 08 PM](https://user-images.githubusercontent.com/50725935/234397243-2d1a3502-29a4-4ec9-85df-9babc24e7ce2.png)
+
 
 ## Programming Language: 
 
