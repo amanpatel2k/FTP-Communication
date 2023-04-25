@@ -38,6 +38,20 @@ PUT Command:
 QUIT Command: 
 ![Screenshot 2023-04-25 at 1 36 29 PM](https://user-images.githubusercontent.com/50725935/234397702-d6b81bef-5af1-4936-8fe0-bb5dae2a8c93.png)
 
+## Side Cases: 
+1. If the client types an invalid command, the server and client will be displayed with a message saying that the command is invalid
+2. If the client types an invalid filename, the server and client will be displayed with a message saying file is invalid
+
+Examples of the Side Cases: 
+
+Image for Side Case #1: 
+![Screenshot 2023-04-25 at 1 45 32 PM](https://user-images.githubusercontent.com/50725935/234399487-a924b255-ec55-4afa-83a7-170a2e33d8f5.png)
+
+
+Image for Side Case #2: 
+![Screenshot 2023-04-25 at 1 43 34 PM](https://user-images.githubusercontent.com/50725935/234399080-66b24f90-f94c-4936-80d1-ba61105ee9f8.png)
+
+
 ## Programming Language: 
 
 Python 
@@ -61,4 +75,3 @@ Python
 
 ## Image Of The Programming Running 
 <img width="1440" alt="Screenshot 2023-04-23 at 4 29 09 PM" src="https://user-images.githubusercontent.com/50725935/233872033-2c91e0c5-3d7e-47e5-8997-79614f9663b8.png">
-
