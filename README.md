@@ -43,11 +43,11 @@ QUIT Command:
 
 Examples of the Side Cases: 
 
-Image for Side Case #1: 
+<strong>Image for Side Case #1: </strong>
 ![Screenshot 2023-04-25 at 1 45 32 PM](https://user-images.githubusercontent.com/50725935/234399487-a924b255-ec55-4afa-83a7-170a2e33d8f5.png)
 
 
-Image for Side Case #2: 
+<strong>Image for Side Case #2: </strong> 
 ![Screenshot 2023-04-25 at 1 43 34 PM](https://user-images.githubusercontent.com/50725935/234399080-66b24f90-f94c-4936-80d1-ba61105ee9f8.png)
 
 
