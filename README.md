@@ -71,7 +71,7 @@ Python
         -> The 8000 is the Port Number 
             -> You can choose any Port Number
 
-4. Once the server and client are both running, then you can start sending commands, such as GET <filename>, PUT <filename>, LS, or QUIT, from the client to the server
+4. Once the server and client are both running, then you can start sending commands, such as GET $lt1filename&gt, PUT <filename>, LS, or QUIT, from the client to the server
 
 ## Image Of The Programming Running 
 <img width="1440" alt="Screenshot 2023-04-23 at 4 29 09 PM" src="https://user-images.githubusercontent.com/50725935/233872033-2c91e0c5-3d7e-47e5-8997-79614f9663b8.png">
