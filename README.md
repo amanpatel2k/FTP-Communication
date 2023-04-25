@@ -74,4 +74,3 @@ Python
 
 ## Image Of The Programming Running 
 ![Screenshot 2023-04-25 at 2 13 23 PM](https://user-images.githubusercontent.com/50725935/234405288-ce756015-e83e-4267-acb6-0ac3210ace35.png)
-<img width="1440" alt="Screenshot 2023-04-25 at 2 13 23 PM (2)" src="https://user-images.githubusercontent.com/50725935/234405290-ee396103-5a4a-4d5c-b2ee-8f1b65fbdd3d.png">
