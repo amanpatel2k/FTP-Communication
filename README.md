@@ -1,7 +1,7 @@
 # CPSC-471-Programming-1
 
 
-#### Programming Assignment #1
+## Programming Assignment #1
 
 ## Project Description: 
 
