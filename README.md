@@ -29,6 +29,14 @@ QUIT Command: If the user types "quit" then the server and client will close.
 LS Command:  
 ![Screenshot 2023-04-25 at 1 34 08 PM](https://user-images.githubusercontent.com/50725935/234397243-2d1a3502-29a4-4ec9-85df-9babc24e7ce2.png)
 
+GET Command: 
+![Screenshot 2023-04-25 at 1 35 31 PM](https://user-images.githubusercontent.com/50725935/234397507-0fd95902-718f-49fb-bc83-5b11de837797.png)
+
+PUT Command: 
+![Screenshot 2023-04-25 at 1 35 57 PM](https://user-images.githubusercontent.com/50725935/234397611-51ebda91-b967-4fde-ad5f-a71d44dc932e.png)
+
+QUIT Command: 
+![Screenshot 2023-04-25 at 1 36 29 PM](https://user-images.githubusercontent.com/50725935/234397702-d6b81bef-5af1-4936-8fe0-bb5dae2a8c93.png)
 
 ## Programming Language: 
 
