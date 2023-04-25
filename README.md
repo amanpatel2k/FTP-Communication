@@ -57,19 +57,21 @@ Python
 
 ## Instructions to Run:  
 1. Have 2 terminals open: one for client and one for server. 
-    -> One of the terminal is the client & the other is the server
+    <ol><li>One of the terminal is the client & the other is the server </li></ol>
 
 2. First we run server program. 
-    -> Run: "python pythonserv.py 8000
-        -> The 8000 is the Port Number 
-            -> You can choose any Port Number 
+    <ol> 
+      <li> Run: "python pythonserv.py 8000 </li>
+      <li> The 8000 is the Port Number in that you can choose any port number </li>
+    </ol>
 
 3. After running the server, we run the client program:
-    -> Run: "python cli.py 127.0.0.1 8000" 
-        -> The 127.0.0.1 is the LocalHost 
-        -> The 8000 is the Port Number 
-            -> You can choose any Port Number
-
+    <ol>
+      <li> Run: "python cli.py 127.0.0.1 8000" </li>
+      <li> The 127.0.0.1 is the LocalHost  </li>
+      <li> The 8000 is the Port Number in that you can choose any port number </li>
+    </ol> 
+   
 4. Once the server and client are both running, then you can start sending commands, such as get filename, put filename, ls, or quit, from the client to the server. A template file, myText.txt, is provided to assist with the get or put command. 
 
 ## Image Of The Programming Running 
