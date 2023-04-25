@@ -1,6 +1,5 @@
 # CPSC-471-Programming-1
 
-
 ## Programming Assignment #1
 
 ## Group Members:
@@ -71,7 +70,8 @@ Python
         -> The 8000 is the Port Number 
             -> You can choose any Port Number
 
-4. Once the server and client are both running, then you can start sending commands, such as get filename, put filename, ls, or quit, from the client to the server
+4. Once the server and client are both running, then you can start sending commands, such as get filename, put filename, ls, or quit, from the client to the server. A template file, myText.txt, is provided to assist with the get or put command. 
 
 ## Image Of The Programming Running 
-<img width="1440" alt="Screenshot 2023-04-23 at 4 29 09 PM" src="https://user-images.githubusercontent.com/50725935/233872033-2c91e0c5-3d7e-47e5-8997-79614f9663b8.png">
+![Screenshot 2023-04-25 at 2 13 23 PM](https://user-images.githubusercontent.com/50725935/234405288-ce756015-e83e-4267-acb6-0ac3210ace35.png)
+<img width="1440" alt="Screenshot 2023-04-25 at 2 13 23 PM (2)" src="https://user-images.githubusercontent.com/50725935/234405290-ee396103-5a4a-4d5c-b2ee-8f1b65fbdd3d.png">
