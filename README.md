@@ -57,9 +57,9 @@ Python
 
 ## Prerequisities to Install: 
 
-Sockets: pip install sockets
-Subprocess: pip install future
-Threading: pip install threading
+<br> Sockets: pip install sockets </br>
+<br> Subprocess: pip install future </br>
+<br> Threading: pip install threading </br>
 
 ## Instructions to Run:  
 1. Have 2 terminals open: one for client and one for server. 
