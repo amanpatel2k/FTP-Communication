@@ -55,6 +55,12 @@ Examples of the Side Cases:
 
 Python 
 
+## Prerequisities to Install: 
+
+Sockets: pip install sockets
+Subprocess: pip install future
+Threading: pip install threading
+
 ## Instructions to Run:  
 1. Have 2 terminals open: one for client and one for server. 
     <ol><li>One of the terminal is the client & the other is the server </li></ol>
