@@ -1,4 +1,4 @@
-# CPSC-471-Programming-1
+# FTP Communication Program
 
 ## Programming Assignment #1
 
